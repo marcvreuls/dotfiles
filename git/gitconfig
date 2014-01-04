@@ -125,3 +125,7 @@
   enabled = true
 [include]
   path = .gitconfig.user
+[github]
+	user = marcvreuls
+[ghi]
+	token = a3a8befb052402bb2d58f8003625837629282118
