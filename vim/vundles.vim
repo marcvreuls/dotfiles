@@ -34,6 +34,7 @@ Bundle "ck3g/vim-change-hash-syntax"
 Bundle "briancollins/vim-jst"
 Bundle "pangloss/vim-javascript"
 Bundle "rodjek/vim-puppet"
+Bundle "othree/javascript-libraries-syntax.vim"
 
 " Html, Xml, Css, Markdown...
 Bundle "claco/jasmine.vim"
@@ -114,6 +115,7 @@ Bundle "terryma/vim-multiple-cursors"
 "vim-misc is required for vim-session
 Bundle "xolox/vim-misc"
 Bundle "xolox/vim-session"
+Bundle "Keithbsmiley/investigate.vim"
 
 " Text objects
 Bundle "austintaylor/vim-indentobject"
@@ -132,11 +134,12 @@ Bundle "vim-scripts/argtextobj.vim"
 " Cosmetics, color scheme, Powerline...
 Bundle "chrisbra/color_highlight.git"
 Bundle "skwp/vim-colors-solarized"
-Bundle "bling/vim-airline.git"
+Bundle "itchyny/lightline.vim"
 Bundle "vim-scripts/TagHighlight.git"
 Bundle "bogado/file-line.git"
 Bundle "jby/tmux.vim.git"
 Bundle "morhetz/gruvbox"
+
 
 
 " Customization

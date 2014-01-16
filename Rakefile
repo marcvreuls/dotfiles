@@ -179,7 +179,7 @@ end
 
 def install_fonts
   puts "======================================================"
-  puts "Installing patched fonts for Powerline."
+  puts "Installing patched fonts for Powerline/Lightline."
   puts "======================================================"
   run %{ cp -f $HOME/.yadr/fonts/* $HOME/Library/Fonts }
   puts
