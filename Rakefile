@@ -11,10 +11,13 @@ task :install => [:submodule_init, :submodules] do
   puts
 
   install_homebrew if RUBY_PLATFORM.downcase.include?("darwin")
+  install_pip if RUBY_PLATFORM.downcase.include?("darwin")
+
   install_rvm_binstubs
 
   # this has all the runcoms from this directory.
   file_operation(Dir.glob('git/*')) if want_to_install?('git configs (color, aliases)')
+  file_operation(Dir.glob('hg/*')) if want_to_install?('mercurial configs (keyrings)')
   file_operation(Dir.glob('irb/*')) if want_to_install?('irb/pry configs (more colorful)')
   file_operation(Dir.glob('ruby/*')) if want_to_install?('rubygems config (faster/no docs)')
   file_operation(Dir.glob('ctags/*')) if want_to_install?('ctags config (better js/ruby support)')
@@ -148,6 +151,26 @@ def install_rvm_binstubs
   puts
 end
 
+def install_pip
+  run %{which pip}
+  unless $?.success?
+    puts "======================================================"
+    puts "Installing pip, the python package manager...If it's"
+    puts "already installed, this will do nothing."
+    puts "======================================================"
+    run %{sudo easy_install pip}
+  end
+
+  puts
+  puts
+  puts "======================================================"
+  puts "Installing pip packages...There may be some warnings."
+  puts "======================================================"
+  run %{pip install mercurial_keyring } 
+  puts
+  puts
+end
+
 def install_homebrew
   run %{which brew}
   unless $?.success?
@@ -169,7 +192,7 @@ def install_homebrew
   puts "======================================================"
   puts "Installing Homebrew packages...There may be some warnings."
   puts "======================================================"
-  run %{brew install zsh ctags git hub tmux reattach-to-user-namespace the_silver_searcher}
+  run %{brew install zsh ctags git mercurial hub tmux reattach-to-user-namespace the_silver_searcher}
   run %{brew install macvim --custom-icons --override-system-vim --with-lua --with-luajit}
   puts
   puts
