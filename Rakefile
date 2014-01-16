@@ -166,7 +166,7 @@ def install_pip
   puts "======================================================"
   puts "Installing pip packages...There may be some warnings."
   puts "======================================================"
-  run %{pip install mercurial_keyring } 
+  run %{pip install mercurial_keyring virtualenvwrapper} 
   puts
   puts
 end
