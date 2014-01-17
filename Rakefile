@@ -166,13 +166,31 @@ def install_homebrew
   puts "Updating Homebrew."
   puts "======================================================"
   run %{brew update}
+  run %{brew tap phinze/homebrew-cask}
   puts
   puts
   puts "======================================================"
   puts "Installing Homebrew packages...There may be some warnings."
   puts "======================================================"
-  run %{brew install zsh ctags git mercurial hub tmux reattach-to-user-namespace the_silver_searcher}
+  run %{brew install zsh ctags git mercurial hub tmux reattach-to-user-namespace the_silver_searcher brew-cask}
   run %{brew install macvim --custom-icons --override-system-vim --with-lua --with-luajit}
+  puts
+  puts
+  puts "======================================================"
+  puts "Installing Homebrew cask applications."
+  puts "======================================================"
+  run %{brew cask install vagrant }
+  run %{brew cask install virtualbox }
+  run %{brew cask install dropbox }
+  run %{brew cask install google-drive }
+  run %{brew cask install onepassword }
+  run %{brew cask install alfred }
+  run %{brew cask install dash }
+  run %{brew cask install haskell-platform }
+  run %{brew cask install google-chrome }
+  run %{brew cask install skype }
+  run %{brew cask install harvest }
+  run %{brew cask install spotify }
   puts
   puts
 end
