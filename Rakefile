@@ -172,7 +172,7 @@ def install_homebrew
   puts "======================================================"
   puts "Installing Homebrew packages...There may be some warnings."
   puts "======================================================"
-  run %{brew install zsh ctags git mercurial hub tmux reattach-to-user-namespace the_silver_searcher brew-cask}
+  run %{brew install zsh ctags git mercurial hub tmux reattach-to-user-namespace the_silver_searcher brew-cask python}
   run %{brew install macvim --custom-icons --override-system-vim --with-lua --with-luajit}
   puts
   puts
@@ -184,6 +184,7 @@ def install_homebrew
   run %{brew cask install dropbox }
   run %{brew cask install google-drive }
   run %{brew cask install onepassword }
+  run %{brew cask install iterm2 }
   run %{brew cask install alfred }
   run %{brew cask install dash }
   run %{brew cask install haskell-platform }
