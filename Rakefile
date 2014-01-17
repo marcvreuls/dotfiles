@@ -193,6 +193,7 @@ def install_homebrew
   run %{brew cask install harvest }
   run %{brew cask install spotify }
   run %{brew cask install unity3d }
+  run %{brew cask install sequel-pro }
   puts
   puts
 end
