@@ -193,7 +193,7 @@ def install_homebrew
   puts "======================================================"
   puts "Installing Homebrew packages...There may be some warnings."
   puts "======================================================"
-  run %{brew install zsh ctags git mercurial hub tmux reattach-to-user-namespace the_silver_searcher brew-cask python}
+  run %{brew install zsh ctags git mercurial hub tmux reattach-to-user-namespace the_silver_searcher brew-cask python mysql libjpeg}
   run %{brew install macvim --custom-icons --override-system-vim --with-lua --with-luajit}
   puts
   puts
@@ -215,6 +215,7 @@ def install_homebrew
   run %{brew cask install spotify }
   run %{brew cask install unity3d }
   run %{brew cask install sequel-pro }
+  run %{brew cask alfred link }
   puts
   puts
 end
