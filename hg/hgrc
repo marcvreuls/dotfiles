@@ -3,3 +3,4 @@ username = Marc Vreuls
 
 [extensions]
 mercurial_keyring =
+graphlog =
