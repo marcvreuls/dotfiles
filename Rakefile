@@ -217,6 +217,7 @@ def install_homebrew
   run %{brew cask install sequel-pro }
   run %{brew cask install mou }
   run %{brew cask install cyberduck }
+  run %{brew cask install teamviewer }
   run %{brew cask alfred link }
   puts
   puts
