@@ -178,7 +178,7 @@ def install_homebrew
     puts "Installing Homebrew, the OSX package manager...If it's"
     puts "already installed, this will do nothing."
     puts "======================================================"
-    run %{ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"}
+    run %{ ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"}
   end
 
   puts
@@ -200,6 +200,8 @@ def install_homebrew
   puts "======================================================"
   puts "Installing Homebrew cask applications."
   puts "======================================================"
+  run %{brew tap phinze/cask }
+  run %{brew install brew-cask }
   run %{brew cask install vagrant }
   run %{brew cask install virtualbox }
   run %{brew cask install dropbox }
