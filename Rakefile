@@ -147,7 +147,12 @@ def install_rvm_binstubs
   puts "bundle exec again! Please use bundle --binstubs and RVM"
   puts "will automatically use those bins after cd'ing into dir."
   puts "======================================================"
+  run %{ curl -sSL https://get.rvm.io | bash}
+  run %{ rvm get stable --auto-dotfiles }
   run %{ chmod +x $rvm_path/hooks/after_cd_bundler }
+  run %{ rvm reload }
+  run %{ rvm install 2.1 }
+  run %{ rvm use 2.1 --default }
   puts
 end
 
