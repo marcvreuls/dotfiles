@@ -5,3 +5,4 @@ username = Marc Vreuls
 mercurial_keyring =
 graphlog =
 hgflow =
+mq=
