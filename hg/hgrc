@@ -4,5 +4,5 @@ username = Marc Vreuls
 [extensions]
 mercurial_keyring =
 graphlog =
-hgflow =
+hgflow = ~/Dropbox/sync-applications/hgflow/hgflow.py
 mq=
