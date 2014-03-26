@@ -226,6 +226,7 @@ def install_homebrew
   run %{brew cask install cyberduck }
   run %{brew cask install teamviewer }
   run %{brew cask alfred link }
+  run %{brew cask install box-sync }
   puts
   puts
 end
