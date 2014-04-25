@@ -6,3 +6,7 @@ mercurial_keyring =
 graphlog =
 hgflow = ~/Dropbox/sync-applications/hgflow/hgflow.py
 mq=
+churn=
+
+[flow]
+autoshelve = true
