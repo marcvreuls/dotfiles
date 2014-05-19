@@ -23,6 +23,7 @@ if has("gui_running")
   end
 else
   "dont load csapprox if we no gui support - silences an annoying warning
-  let g:CSApprox_loaded = 1
+  let g:CSApprox_loaded = 1 
+  colorscheme elflord
 endif
 
