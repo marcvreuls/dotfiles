@@ -195,13 +195,15 @@ def install_homebrew
   puts "======================================================"
   run %{brew update}
   run %{brew tap phinze/homebrew-cask}
+  run %{brew tap homebrew/science}
   puts
   puts
   puts "======================================================"
   puts "Installing Homebrew packages...There may be some warnings."
   puts "======================================================"
-  run %{brew install scala sbt zsh ctags git mercurial hub tmux reattach-to-user-namespace the_silver_searcher brew-cask python mysql libjpeg wget jmeter docker boot2docker siege}
+  run %{brew install gfortran r gettext scala sbt zsh ctags git mercurial hub tmux reattach-to-user-namespace the_silver_searcher brew-cask python mysql libjpeg wget jmeter docker boot2docker siege}
   run %{brew install macvim --custom-icons --override-system-vim --with-lua --with-luajit}
+  run %{brew link gettext --force}
   puts
   puts
   puts "======================================================"
@@ -227,6 +229,8 @@ def install_homebrew
   run %{brew cask install mou }
   run %{brew cask install cyberduck }
   run %{brew cask install teamviewer }
+  run %{brew cask install xquartz}
+  run %{brew cask install rstudio}
   run %{brew cask alfred link }
   run %{brew cask install box-sync }
   puts
