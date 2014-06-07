@@ -153,7 +153,7 @@ def install_rvm_binstubs
   run %{ rvm get stable --auto-dotfiles }
   run %{ chmod +x $rvm_path/hooks/after_cd_bundler }
   run %{ rvm reload }
-  run %{ rvm install 2.1 }
+  run %{ rvm install 2.1 -C --with-arch=x86_64,i386}
   run %{ rvm use 2.1 --default }
   puts
 end
@@ -196,6 +196,7 @@ def install_homebrew
   run %{brew update}
   run %{brew tap phinze/homebrew-cask}
   run %{brew tap homebrew/science}
+  run %{brew tap phinze/cask }
   puts
   puts
   puts "======================================================"
@@ -209,7 +210,6 @@ def install_homebrew
   puts "======================================================"
   puts "Installing Homebrew cask applications."
   puts "======================================================"
-  run %{brew tap phinze/cask }
   run %{brew install brew-cask }
   run %{brew cask install vagrant }
   run %{brew cask install virtualbox }
