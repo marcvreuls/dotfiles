@@ -18,6 +18,7 @@ task :install => [:submodule_init, :submodules] do
   # this has all the runcoms from this directory.
   file_operation(Dir.glob('git/*')) if want_to_install?('git configs (color, aliases)')
   file_operation(Dir.glob('hg/*')) if want_to_install?('mercurial configs (keyrings)')
+  file_operation(Dir.glob('ghci/*')) if want_to_install?('ghci configs')
   file_operation(Dir.glob('irb/*')) if want_to_install?('irb/pry configs (more colorful)')
   file_operation(Dir.glob('ruby/*')) if want_to_install?('rubygems config (faster/no docs)')
   file_operation(Dir.glob('ctags/*')) if want_to_install?('ctags config (better js/ruby support)')
@@ -202,7 +203,7 @@ def install_homebrew
   puts "======================================================"
   puts "Installing Homebrew packages...There may be some warnings."
   puts "======================================================"
-  run %{brew install gfortran r gettext scala sbt zsh ctags git mercurial hub tmux reattach-to-user-namespace the_silver_searcher brew-cask python mysql libjpeg wget jmeter docker boot2docker siege}
+  run %{brew install gfortran R gettext scala sbt zsh ctags git mercurial hub tmux reattach-to-user-namespace the_silver_searcher brew-cask python mysql libjpeg wget jmeter docker boot2docker siege}
   run %{brew install macvim --custom-icons --override-system-vim --with-lua --with-luajit}
   run %{brew link gettext --force}
   puts

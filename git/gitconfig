@@ -129,3 +129,6 @@
 	user = marcvreuls
 [credential]
 	helper = osxkeychain
+[user]
+	name = Marc Vreuls
+	email = marcvreuls@gmail.com
