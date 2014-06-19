@@ -232,6 +232,7 @@ def install_homebrew
   run %{brew cask install teamviewer }
   run %{brew cask install xquartz}
   run %{brew cask install rstudio}
+  run %{brew cask install hipchat }
   run %{brew cask alfred link }
   run %{brew cask install box-sync }
   puts
