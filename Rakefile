@@ -220,7 +220,6 @@ def install_homebrew
   run %{brew cask install iterm2 }
   run %{brew cask install alfred }
   run %{brew cask install dash }
-  run %{brew cask install haskell-platform }
   run %{brew cask install google-chrome }
   run %{brew cask install skype }
   run %{brew cask install harvest }
@@ -233,6 +232,7 @@ def install_homebrew
   run %{brew cask install xquartz}
   run %{brew cask install rstudio}
   run %{brew cask install hipchat }
+  run %{brew cask install cocoarestapi }
   run %{brew cask alfred link }
   run %{brew cask install box-sync }
   puts

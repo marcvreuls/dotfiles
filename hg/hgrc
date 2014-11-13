@@ -2,7 +2,7 @@
 username = Marc Vreuls
 
 [extensions]
-mercurial_keyring =
+mercurial_keyring =/usr/local/bin/keyring 
 graphlog =
 hgflow = ~/Dropbox/sync-applications/hgflow/hgflow.py
 mq=
