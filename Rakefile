@@ -24,6 +24,9 @@ task :install => [:submodule_init, :submodules] do
   file_operation(Dir.glob('ctags/*')) if want_to_install?('ctags config (better js/ruby support)')
   file_operation(Dir.glob('tmux/*')) if want_to_install?('tmux config')
   file_operation(Dir.glob('vimify/*')) if want_to_install?('vimification of command line tools')
+
+  Rake::Task[:cabal_packages].execute
+
   if want_to_install?('vim configuration (highly recommended)')
     file_operation(Dir.glob('{vim,vimrc}'))
     Rake::Task["install_vundle"].execute
@@ -92,6 +95,25 @@ task :vundle_migration do
     FileUtils.rm_rf(File.join('.git', 'modules', sub_path))
   end
   FileUtils.mv(File.join('vim','bundle'), File.join('vim', 'bundle.old'))
+end
+
+desc "Install cabal packages"
+task :cabal_packages do
+    puts "======================================================"
+    puts "Installing and updating cabal packages."
+    puts "The installer will now proceed to run cabal install."
+    puts "======================================================"
+
+    puts ""
+    packages = %w(ghc-mod hoogle)
+
+    run %{ cabal update }
+
+    packages.each do |package|
+        run %{ cabal install #{package} }
+    end
+
+    run %{ hoogle data }
 end
 
 desc "Runs Vundle installer in a clean vim environment"

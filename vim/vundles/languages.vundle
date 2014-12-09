@@ -13,3 +13,8 @@ Bundle "nelstrom/vim-markdown-preview"
 Bundle "skwp/vim-html-escape"
 Bundle "tpope/vim-haml"
 Bundle "honza/vim-snippets"
+Bundle 'neocomplcache'
+Bundle 'surround.vim'
+Bundle 'Gundo'
+Bundle "Shougo/vimproc"
+Bundle "marcvreuls/conque-term"
