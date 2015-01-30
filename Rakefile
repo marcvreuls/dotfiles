@@ -225,7 +225,7 @@ def install_homebrew
   puts "======================================================"
   puts "Installing Homebrew packages...There may be some warnings."
   puts "======================================================"
-  run %{brew install phantomjs gfortran R gettext scala sbt zsh ctags git mercurial hub tmux reattach-to-user-namespace the_silver_searcher brew-cask python mysql libjpeg wget jmeter docker boot2docker siege}
+  run %{brew install phantomjs gfortran R gettext scala sbt zsh ctags git mercurial hub tmux reattach-to-user-namespace the_silver_searcher brew-cask python mysql libjpeg wget jmeter docker boot2docker siege typesafe-activator}
   run %{brew install macvim --custom-icons --override-system-vim --with-lua --with-luajit}
   run %{brew link gettext --force}
   puts
