@@ -8,7 +8,6 @@ Bundle "itspriddle/vim-jquery.git"
 Bundle "jtratner/vim-flavored-markdown.git"
 Bundle "kchmck/vim-coffee-script"
 Bundle "scrooloose/syntastic.git"
-Bundle "garbas/vim-snipmate.git"
 Bundle "nelstrom/vim-markdown-preview"
 Bundle "skwp/vim-html-escape"
 Bundle "tpope/vim-haml"
@@ -18,3 +17,5 @@ Bundle 'surround.vim'
 Bundle 'Gundo'
 Bundle "Shougo/vimproc"
 Bundle "marcvreuls/conque-term"
+Bundle 'sheerun/vim-polyglot'
+Bundle 'garbas/vim-snipmate.git'
