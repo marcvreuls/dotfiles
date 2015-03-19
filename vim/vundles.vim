@@ -33,6 +33,8 @@ runtime scala.vundle
 runtime python.vundle
 runtime agda.vundle
 runtime dash.vundle
+runtime latex.vundle
+runtime ampl.vundle
 
 " The plugins listed in ~/.vim/.vundles.local will be added here to
 " allow the user to add vim plugins to yadr without the need for a fork.
