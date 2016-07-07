@@ -1,2 +1,1 @@
-Bundle 'eagletmt/neco-ghc'
-Bundle 'eagletmt/ghcmod-vim'
+Bundle 'vim-scripts/haskell'
